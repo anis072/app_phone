@@ -5,6 +5,7 @@ import { FileTransfer ,FileTransferObject,FileUploadOptions} from '@ionic-native
 import {FileChooser} from '@ionic-native/file-chooser/ngx';
 import {File} from '@ionic-native/file/ngx';
 import {FilePath} from '@ionic-native/file-path/ngx';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the FillPage page.
@@ -89,7 +90,7 @@ export class FillPage {
   add(){
     this.complaint.AddComplain(this.myRec,this.myFile).then((result)=>{
       console.log(result)
-      this.navCtrl.pop()
+      this.navCtrl.push(HomePage)
     },(err)=>{
       console.log("insert err: "+ err)
       console.log("this.myInfo: "+ JSON.stringify(this.myRec))

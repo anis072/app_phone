@@ -42,12 +42,15 @@ $colors: (
 );
 
 
-// App iOS Variables
+.header{
+  --theme-color-header: #2f5a7c;
+
+  // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
 
-
+}
 
 // App Material Design Variables
 // --------------------------------------------------

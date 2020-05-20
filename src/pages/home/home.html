@@ -1,11 +1,9 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="fillPage()">
-        <ion-icon name="options"></ion-icon>
-      </button>
-    </ion-buttons>
+    <ion-buttons end>    <button ion-button color="primary"  (click)="myLogOut()"   > Log out &nbsp;<ion-icon color ="primary" name="exit"></ion-icon></button> </ion-buttons>
+
+
 
 <!--
     <ion-buttons end>
@@ -31,18 +29,18 @@
 
     <ion-list >
 
-        <ion-item>
+        <ion-item class="box">
 
-          <h2> Type: {{rec.type}} </h2>
-          <h2 >Description {{rec.description}} </h2>
-          <h2 *ngIf="rec.avancement === 'Pending Team leader validation'">Progress: In progress </h2>
-          <h2 *ngIf="rec.avancement != 'Pending Team leader validation'" >Progress:  {{rec.avancement}}</h2>
-          <h2>Project: {{rec.nameProjet}} </h2>
-          <h2>Created : {{ rec.created_at }}</h2>
+          <h2><ion-row ><div class="tile"> Type : </div> {{rec.type}} </ion-row> </h2>
+          <h2 ><ion-row> <div class="tile"> Description:</div>  {{rec.description}}qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq</ion-row> </h2>
+          <h2  *ngIf="rec.avancement === 'Pending Team leader validation'"><ion-row><div class="tile"> Progress :</div> In progress </ion-row></h2>
+          <h2 *ngIf="rec.avancement != 'Pending Team leader validation'" ><ion-row><div class="tile"> Progress :</div>  {{rec.avancement}}</ion-row></h2>
+          <h2><ion-row><div class="tile"> Project: </div>{{rec.nameProjet}}</ion-row> </h2>
+          <h2><ion-row><div class="tile"> Created :</div> {{ rec.created_at }} </ion-row></h2>
 
-      <hr>
+
       </ion-item>
-
+      <hr>
     </ion-list>
 
   </div>

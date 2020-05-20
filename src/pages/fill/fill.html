@@ -29,16 +29,28 @@
             <ion-textarea type="text" [(ngModel)]="myRec.description"></ion-textarea>
           </ion-item>
           <div>
-          <ion-label >Filee</ion-label>
-          <button ion-button color="primary" (click)="uploadFile()">Upload File</button>
-          <ion-label  >{{ uploadText }}</ion-label>
-          <button color="primary" ion-button (clik)="AbortUpload()">Cancel Uploading</button>
-          </div>
+
+        <ion-row>
+            <ion-col class="upload-col">
+              <button ion-button class="submit-btn" full type="submit" (click)="uploadFile()" >Upload File</button>
+            </ion-col>
+            <ion-label  >{{ uploadText }}</ion-label>
+          </ion-row>
+          <ion-row>
+          <ion-col class="upload-col">
+              <button ion-button class="submit-btn" type="submit" (click)="AbortUpload()" >Cancel Uploading</button>
+            </ion-col>
+          </ion-row>
+
+
+                    </div>
         </ion-list>
 
 
-      <div padding>
-        <button   ion-button color="primary"   (click)="add()"   >Insert</button>
-      </div>
+        <ion-row>
+            <ion-col class="signup-col">
+              <button ion-button class="submit-btn" full type="submit" (click)="add()" >Add Complain</button>
+            </ion-col>
+          </ion-row>
 
 </ion-content>
